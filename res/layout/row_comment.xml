@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <TextView
+            android:id="@+id/row_comment_info"
+            android:layout_width="wrap_content"  android:layout_height="wrap_content"
+            android:text="à faire: xxx"
+            android:textSize="9dp"
+            />
+
+    <TextView
+            android:id="@+id/row_comment_content"
+            android:layout_width="wrap_content"   android:layout_height="wrap_content"
+            android:layout_above="@id/row_comment_info"
+            android:textSize="12dp"
+            />
+
+</RelativeLayout>

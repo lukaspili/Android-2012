@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="url_base">http://twothousandtwelve.heroku.com/api</string>
+
+    <string name="url_ideas">/ideas</string>
+    <string name="url_ideas_create">/ideas</string>
+    <string name="url_idea_comments">/ideas/%1$s/comments</string>
+    <string name="url_idea_opinion">/ideas/%1$s/opinions</string>
+
+
+    <string name="url_users_login">/users/login</string>
+    <string name="url_users_create">/users</string>
+
+</resources>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+    <LinearLayout
+            android:id="@+id/layoutButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+
+            >
+        <Button
+                android:id="@+id/buttonCancel" android:text="Annuler"
+                android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+        <Button
+                android:id="@+id/buttonAdd" android:text="Ajouter"
+                android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+
+
+    </LinearLayout>
+
+    <Button
+            android:id="@+id/buttonNoAccount" android:text="noCount"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_above="@id/layoutButton"
+            android:layout_centerHorizontal="true"
+            />
+
+    <TextView
+            android:id="@+id/textMail"
+            android:text="Adress m@il : "
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_above="@id/buttonNoAccount"
+            android:layout_marginBottom="20dp"/>
+    <EditText
+            android:id="@+id/editMail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/textMail"
+            android:layout_alignParentRight="true"/>
+
+    <TextView
+            android:id="@+id/textPassword"
+            android:text="Mot de passe : "
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_above="@id/textMail"
+            android:layout_marginBottom="20dp"/>
+    <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/textPassword"
+            android:layout_alignParentRight="true"/>
+
+    <TextView
+            android:id="@+id/textPseudo"
+            android:text="Votre pseudo : "
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_above="@id/textPassword"
+            android:layout_marginBottom="23dp"/>
+    <EditText
+            android:id="@+id/editPseudo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/textPseudo"
+            android:layout_alignParentRight="true"/>
+
+    <TextView
+            android:id="@+id/textAccountRow"
+            android:text="-------------Votre Compte---------------"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_above="@id/textPseudo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"/>
+
+    <TextView
+            android:id="@+id/textCategory"
+            android:text="Catégorie : "
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_above="@id/textAccountRow"
+            android:layout_marginBottom="13dp"/>
+    <EditText
+            android:id="@+id/editCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/textCategory"
+            android:layout_alignParentRight="true"/>
+
+
+    <TextView
+            android:id="@+id/textLieu"
+            android:text="Lieu : "
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_above="@id/textCategory"
+            android:layout_marginBottom="23dp"/>
+    <EditText
+            android:id="@+id/editLieu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/textLieu"
+            android:layout_alignParentRight="true"/>
+
+
+    <TextView
+            android:id="@+id/textDescription"
+            android:text="Description : "
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_above="@id/textLieu"
+            android:layout_marginBottom="23dp"/>
+    <EditText
+            android:id="@+id/editDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/textDescription"
+            android:layout_alignParentRight="true"/>
+
+
+    <TextView
+            android:id="@+id/textTitle"
+            android:text="Titre : "
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_above="@id/textDescription"
+            android:layout_marginBottom="23dp"/>
+    <EditText
+            android:id="@+id/editTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/textTitle"
+            android:layout_alignParentRight="true"/>
+
+    <TextView
+            android:id="@+id/textYourIdea"
+            android:text="-------------Votre Idée---------------"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_above="@id/textTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"/>
+
+
+</RelativeLayout>

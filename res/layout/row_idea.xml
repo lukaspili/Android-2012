@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+
+    <ImageView
+            android:id="@+id/row_image"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_launcher"
+            />
+
+    <TextView
+            android:id="@+id/row_idea_name"
+            android:layout_width="wrap_content"   android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/row_image"
+            android:layout_alignTop="@id/row_image"
+            />
+
+    <TextView
+            android:id="@+id/row_idea_wanna_do"
+            android:layout_width="wrap_content"  android:layout_height="wrap_content"
+            android:layout_below="@id/row_idea_name"
+            android:layout_toRightOf="@id/row_image"
+            android:text="à faire: xxx"
+            android:textSize="10dp"
+            />
+
+    <TextView
+            android:id="@+id/row_idea_not_care"
+            android:layout_width="wrap_content"  android:layout_height="wrap_content"
+            android:layout_below="@id/row_idea_name"
+            android:layout_toRightOf="@id/row_idea_wanna_do"
+            android:text="je m'en fou: xxx"
+            android:textSize="10dp"
+            />
+
+    <TextView
+            android:id="@+id/row_idea_had_done"
+            android:layout_width="wrap_content"   android:layout_height="wrap_content"
+            android:layout_below="@id/row_idea_name"
+            android:layout_toRightOf="@id/row_idea_not_care"
+            android:text="déjà fait: xxx"
+            android:textSize="10dp"
+            />
+
+
+</RelativeLayout>

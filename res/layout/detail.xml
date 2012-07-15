@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+
+    <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            >
+        <Button
+                android:id="@+id/button_want_to"
+                android:text="want to XX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textSize="11dp"
+                />
+        <Button
+                android:id="@+id/button_done"
+                android:text="done XX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11dp"
+
+                />
+        <Button
+                android:id="@+id/button_didnot_want"
+                android:text="want to XX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11dp"
+
+                />
+    </LinearLayout>
+
+    <Button
+            android:id="@+id/button_new_comment"
+            android:text="nouveau commentaire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="9dp"
+            android:layout_above="@id/linear"/>
+
+
+    <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_launcher"
+            />
+
+    <TextView
+            android:id="@+id/name"
+            android:text="helllooooo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/image"
+            />
+
+    <TextView
+            android:id="@+id/category"
+            android:text="Catégorie: xxxxx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/image"
+            android:layout_below="@id/name"
+            />
+
+    <TextView
+            android:id="@+id/date"
+            android:text="Proposé le 19/07/2012 par Lukas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/image"
+            android:layout_below="@id/category"
+            />
+
+    <TextView
+            android:id="@+id/description_category"
+            android:text="Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/image"
+            android:layout_marginTop="15dp"
+            />
+    <TextView
+            android:id="@+id/description"
+            android:text="XXXXX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/description_category"
+            android:layout_marginTop="15dp"
+            />
+
+    <TextView
+            android:id="@+id/comment_category"
+            android:text="Commentaire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/description"
+            android:layout_marginTop="15dp"
+            />
+
+    <ListView
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/button_new_comment"
+            android:layout_below="@id/comment_category"
+            />
+
+</RelativeLayout>

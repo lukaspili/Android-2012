@@ -1,0 +1,3 @@
+[submodule "libs/andutils"]
+	path = libs/andutils
+	url = git@github.com:Siu-soon/Android-Utils.git
