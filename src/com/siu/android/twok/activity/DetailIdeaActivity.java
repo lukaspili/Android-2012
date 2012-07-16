@@ -3,6 +3,8 @@ package com.siu.android.twok.activity;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.Fragment;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -92,10 +94,9 @@ public class DetailIdeaActivity extends SherlockFragmentActivity {
         buttonAlready = (Button) findViewById(R.id.button_done);
         buttonNewComment = (Button) findViewById(R.id.button_new_comment);
 
-        Idea idea = (Idea) getIntent().getExtras().getSerializable("idea");
-        updateIdea(idea);
+        idea = (Idea) getIntent().getExtras().getSerializable("idea");
+        updateIdea();
 
-        final String idNumber = idea.getId();// c'est la seul solution que j'ai trouvé!
         // listView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listeStrings));
 
         buttonWant.setOnClickListener(new View.OnClickListener() {
@@ -119,7 +120,12 @@ public class DetailIdeaActivity extends SherlockFragmentActivity {
         buttonNewComment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentUtils.showDialog(getSupportFragmentManager(), new NewCommentDialogFragment(idNumber));// LANCER LE DIALOGUE
+                Bundle bundle = new Bundle();
+                bundle.putSerializable(NewCommentDialogFragment.IDEA, idea);
+                DialogFragment fragment = new NewCommentDialogFragment();
+                fragment.setArguments(bundle);
+
+                FragmentUtils.showDialog(getSupportFragmentManager(), fragment);// LANCER LE DIALOGUE
 
                 //formulaire
             }
@@ -137,8 +143,7 @@ public class DetailIdeaActivity extends SherlockFragmentActivity {
     }
 
 
-    private void updateIdea(Idea idea) {
-        this.idea = idea;
+    private void updateIdea() {
         textViewName.setText(idea.getName());
         textViewNickName.setText("Crée par: " + idea.getNickname() + ", le: " + idea.getDate());
         textViewContent.setText(idea.getContent());
@@ -166,9 +171,8 @@ public class DetailIdeaActivity extends SherlockFragmentActivity {
     }
 
     public void onFinishGetCommentsTask(List<Comment> comments) {
-        Log.d(getClass().getName(), comments.get(0).getContent());
-        Log.d(getClass().getName(), comments.get(1).getContent());
         if (null != comments) {
+            Log.d(getClass().getName(), "Comments = " + comments.size());
             listeStrings.clear();
             listeStrings.addAll(comments);
             arrayAdapter.notifyDataSetChanged();
@@ -222,9 +226,10 @@ public class DetailIdeaActivity extends SherlockFragmentActivity {
         }
 
         @Override
-        protected void onPostExecute(Idea idea) {
-            if (null != activity && null != idea) {
-                activity.updateIdea(idea);
+        protected void onPostExecute(Idea ideaUpdated) {
+            if (null != activity && null != ideaUpdated) {
+                this.idea = ideaUpdated;
+                activity.updateIdea();
             }
         }
     }

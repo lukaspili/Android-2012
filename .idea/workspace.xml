@@ -14,7 +14,6 @@
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_CUSTOM_FILTER" value="siu" />
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f87915fa-d644-42ab-8ff2-613c98c7e917" name="Default" comment="">
@@ -82,10 +81,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/activity/MainActivity.java">
+      <file leaf-file-name="NewCommentDialogFragment.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/fragment/formulaire/NewCommentDialogFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="6" selection-start="823" selection-end="872" vertical-scroll-proportion="0.0">
+            <state line="137" column="106" selection-start="4801" selection-end="4801" vertical-scroll-proportion="5.96371">
+              <folding>
+                <element signature="e#2857#3006#0" expanded="true" />
+                <element signature="e#2995#2996#0" expanded="true" />
+                <element signature="e#3053#3205#0" expanded="true" />
+                <element signature="e#3194#3195#0" expanded="true" />
+                <element signature="e#3249#3407#0" expanded="true" />
+                <element signature="e#3396#3397#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Idea.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/model/Idea.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="13" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -94,61 +109,25 @@
       <file leaf-file-name="CreateCommentTask.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/task/CreateCommentTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="15" selection-start="963" selection-end="963" vertical-scroll-proportion="0.0">
+            <state line="25" column="16" selection-start="813" selection-end="813" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewCommentDialogFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/fragment/formulaire/NewCommentDialogFragment.java">
+      <file leaf-file-name="CreateUserTask.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/task/CreateUserTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="37" selection-start="1006" selection-end="1030" vertical-scroll-proportion="0.0">
+            <state line="51" column="0" selection-start="1678" selection-end="1678" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginUserTask.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/task/LoginUserTask.java">
+      <file leaf-file-name="NewIdeaDialogFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/fragment/formulaire/NewIdeaDialogFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="36" selection-start="833" selection-end="833" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IdeaAdapter.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/adaptater/IdeaAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="54" selection-start="1361" selection-end="1361" vertical-scroll-proportion="0.16696915">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new_comment_dialog.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/new_comment_dialog.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="40" selection-start="3577" selection-end="3588" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataAccessLayer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/DataAccessLayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="13" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/model/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="25" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
+            <state line="58" column="31" selection-start="1870" selection-end="1870" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -157,7 +136,46 @@
       <file leaf-file-name="DetailIdeaActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/activity/DetailIdeaActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="4" selection-start="3620" selection-end="3620" vertical-scroll-proportion="0.0">
+            <state line="123" column="38" selection-start="4536" selection-end="4536" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#4359#4852#0" expanded="true" />
+                <element signature="e#4841#4842#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommentAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/adaptater/CommentAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="62" selection-start="1750" selection-end="1750" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="row_comment.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/row_comment.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="49" selection-start="662" selection-end="662" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommentDeserializer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/parser/CommentDeserializer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="50" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GsonFormatter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/parser/GsonFormatter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="40" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -173,22 +191,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/siu/android/twok/fragment/main/ArticlesFragment1.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/com/siu/android/twok/task/GetCommentTask.java" />
-        <option value="$PROJECT_DIR$/src/com/siu/android/twok/parser/GsonFormatter.java" />
         <option value="$PROJECT_DIR$/src/com/siu/android/twok/adaptater/CommentAdapter.java" />
-        <option value="$PROJECT_DIR$/src/com/siu/android/twok/parser/CommentDeserializer.java" />
         <option value="$PROJECT_DIR$/gen/com/siu/android/twok/R.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/com/siu/android/twok/task/CreateCommentTask.java" />
         <option value="$PROJECT_DIR$/src/com/siu/android/twok/model/User.java" />
         <option value="$PROJECT_DIR$/src/com/siu/android/twok/fragment/formulaire/NewIdeaDialogFragment.java" />
-        <option value="$PROJECT_DIR$/src/com/siu/android/twok/activity/DetailIdeaActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/new_comment_dialog.xml" />
-        <option value="$PROJECT_DIR$/src/com/siu/android/twok/fragment/formulaire/NewCommentDialogFragment.java" />
         <option value="$PROJECT_DIR$/src/com/siu/android/twok/task/LoginUserTask.java" />
         <option value="$PROJECT_DIR$/src/com/siu/android/twok/adaptater/IdeaAdapter.java" />
+        <option value="$PROJECT_DIR$/res/layout/row_comment.xml" />
+        <option value="$PROJECT_DIR$/src/com/siu/android/twok/parser/GsonFormatter.java" />
+        <option value="$PROJECT_DIR$/src/com/siu/android/twok/parser/CommentDeserializer.java" />
+        <option value="$PROJECT_DIR$/src/com/siu/android/twok/task/CreateCommentTask.java" />
+        <option value="$PROJECT_DIR$/src/com/siu/android/twok/activity/DetailIdeaActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/siu/android/twok/fragment/formulaire/NewCommentDialogFragment.java" />
       </list>
     </option>
   </component>
@@ -291,6 +309,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android-2012" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android-2012" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twok" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android-2012" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android-2012" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twok" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mother" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -524,7 +590,7 @@
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="F:/ASSUS ON TENCULE/IdeaProjects/andro" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -801,8 +867,10 @@
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6895973" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27651516" sideWeight="0.6895973" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37751678" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -810,20 +878,18 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27348486" sideWeight="0.2181208" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6895973" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48825502" sideWeight="0.48181817" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36073825" sideWeight="0.4878788" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.48657718" sideWeight="0.48181817" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.4939394" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24621212" sideWeight="0.23657718" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3151515" sideWeight="0.6224832" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3151515" sideWeight="0.51342285" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3104027" sideWeight="0.5219697" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="554" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27651516" sideWeight="0.6392617" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37751678" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36073825" sideWeight="0.4878788" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -921,67 +987,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/model/Idea.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/fragment/formulaire/NewIdeaDialogFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="4" selection-start="1543" selection-end="1543" vertical-scroll-proportion="0.03046595" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/new_idea_dialog.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="144" column="1" selection-start="224" selection-end="5799" vertical-scroll-proportion="2.0526316" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/parser/GsonFormatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="349" selection-end="349" vertical-scroll-proportion="0.70037454" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/fragment/main/ArticlesFragment1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="73" selection-start="1980" selection-end="1980" vertical-scroll-proportion="-15.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gen/com/siu/android/twok/R.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="19" selection-start="2340" selection-end="2340" vertical-scroll-proportion="0.8623482" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/row_idea.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="46" selection-start="830" selection-end="847" vertical-scroll-proportion="0.33076924" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/activity/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="6" selection-start="823" selection-end="872" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/task/CreateCommentTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="15" selection-start="963" selection-end="963" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/fragment/formulaire/NewCommentDialogFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="37" selection-start="1006" selection-end="1030" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/task/LoginUserTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="36" selection-start="833" selection-end="833" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/new_comment_dialog.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="88" column="40" selection-start="3577" selection-end="3588" vertical-scroll-proportion="0.0" />
@@ -997,15 +1002,104 @@
         <state line="23" column="25" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/activity/DetailIdeaActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="4" selection-start="3620" selection-end="3620" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/adaptater/IdeaAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="54" selection-start="1361" selection-end="1361" vertical-scroll-proportion="0.16696915">
+        <state line="65" column="6" selection-start="2010" selection-end="2010" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/task/GetCommentTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="634" selection-end="634" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/model/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="16" selection-start="893" selection-end="893" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/adaptater/CommentAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="62" selection-start="1750" selection-end="1750" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/row_comment.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="49" selection-start="662" selection-end="662" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/parser/GsonFormatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="40" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/parser/CommentDeserializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="50" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/task/CreateUserTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="0" selection-start="1678" selection-end="1678" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/task/CreateCommentTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="16" selection-start="813" selection-end="813" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/model/Idea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/fragment/formulaire/NewIdeaDialogFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="31" selection-start="1870" selection-end="1870" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/activity/DetailIdeaActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="38" selection-start="4536" selection-end="4536" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#4359#4852#0" expanded="true" />
+            <element signature="e#4841#4842#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/siu/android/twok/fragment/formulaire/NewCommentDialogFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="137" column="106" selection-start="4801" selection-end="4801" vertical-scroll-proportion="5.96371">
+          <folding>
+            <element signature="e#2857#3006#0" expanded="true" />
+            <element signature="e#2995#2996#0" expanded="true" />
+            <element signature="e#3053#3205#0" expanded="true" />
+            <element signature="e#3194#3195#0" expanded="true" />
+            <element signature="e#3249#3407#0" expanded="true" />
+            <element signature="e#3396#3397#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

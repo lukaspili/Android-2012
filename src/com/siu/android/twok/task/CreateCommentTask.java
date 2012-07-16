@@ -44,13 +44,10 @@ public class CreateCommentTask extends AsyncTask<Void, String, Idea> {
             return null;
         }
         User user = DataAccessLayer.getInstance().getUser();
-        if (null == user) {
-            Log.e(getClass().getName(), "User null");
-        }
 
         String url = Application.getContext().getString(R.string.url_base) + Application.getContext().getString(R.string.url_idea_opinion, idNumber);
         Log.e( getClass().getName(), "création du commentaire à : " + url);
-        String response = HttpUtils.getResponseAsString(HttpUtils.request(url, HttpUtils.HttpMethod.POST, "access_token", user.getToken(),
+        String response = HttpUtils.getResponseAsString(HttpUtils.request(url, HttpUtils.HttpMethod.POST, "access_token", user.getToken() ,
                 "idea[category_ids][]", "873570203659140", "comment[name]", titre, "comment[content]", description));
 
         Log.e(getClass().getName(), "Liste de commentaire 'la reponse': "+ response);

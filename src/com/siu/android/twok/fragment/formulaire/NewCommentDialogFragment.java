@@ -12,15 +12,13 @@ import com.actionbarsherlock.app.SherlockDialogFragment;
 import com.siu.android.andutils.Application;
 import com.siu.android.twok.DataAccessLayer;
 import com.siu.android.twok.R;
-import com.siu.android.twok.model.Comment;
+import com.siu.android.twok.model.Idea;
 import com.siu.android.twok.model.User;
 import com.siu.android.twok.task.CreateCommentTask;
 import com.siu.android.twok.task.CreateUserTask;
 import com.siu.android.twok.task.LoginUserTask;
 import com.siu.android.twok.task.mother.LoginTaskCallback;
 import com.siu.android.twok.task.mother.NewIdeaTaskCallback;
-
-import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -31,6 +29,7 @@ import java.util.List;
  */
 public class NewCommentDialogFragment extends SherlockDialogFragment implements LoginTaskCallback, NewIdeaTaskCallback {
 
+    public final static  String IDEA = "idea";
 
     private TextView editViewContent;
     private TextView editViewPseudo;
@@ -41,15 +40,11 @@ public class NewCommentDialogFragment extends SherlockDialogFragment implements 
     private Button buttonCancel;
     private Button buttonValidate;
 
-    private String id;
+    private Idea idea;
 
     private CreateCommentTask taskCreateComment;
     private CreateUserTask taskCreateUser;
     private LoginUserTask taskLoginUser;
-
-    public NewCommentDialogFragment(String id) {
-        this.id = id;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -67,20 +62,26 @@ public class NewCommentDialogFragment extends SherlockDialogFragment implements 
         editViewPseudo = (TextView) view.findViewById(R.id.editPseudo);
         editViewMail = (TextView) view.findViewById(R.id.editMail);
 
+        buttonCancel = (Button) view.findViewById(R.id.buttonCancel);
+        buttonNoAccount = (Button) view.findViewById(R.id.buttonNoAccount);
+        buttonValidate = (Button) view.findViewById(R.id.buttonAdd);
+
         return view;
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);    //To change body of overridden methods use File | Settings | File Templates.
+        super.onActivityCreated(savedInstanceState);
+
+        idea = (Idea) getArguments().getSerializable(IDEA);
 
         getDialog().setTitle(Application.getContext().getString(R.string.formulaire_comment_title));
 
         buttonValidate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-             }
+                createComment();
+            }
         });
 
         buttonNoAccount.setOnClickListener(new View.OnClickListener() {
@@ -99,24 +100,22 @@ public class NewCommentDialogFragment extends SherlockDialogFragment implements 
     }
 
     private void checkFieldFillup() {
-        if(null != DataAccessLayer.getInstance().getUser()){
+        if (null != DataAccessLayer.getInstance().getUser()) {
             Log.d(getClass().getName(), "TRY TO: Post Idée direct");
             createComment();
-        }
-        else if(editViewMail.getText().toString().length() > 0){
+        } else if (editViewMail.getText().toString().length() > 0) {
             Log.d(getClass().getName(), "TRY TO :CREAT USER");
             createUser();
-        }
-        else if(editViewPseudo.length() > 0 && editViewPassword.length() > 0){
+        } else if (editViewPseudo.length() > 0 && editViewPassword.length() > 0) {
             Log.d(getClass().getName(), "TRY to loggin");
             loginUser();
-        }else{
+        } else {
             Toast.makeText(getSherlockActivity(), "Remplissez tous les champs", 2000).show();
         }
     }
 
 
-    private void createUser(){
+    private void createUser() {
         String name = editViewPseudo.getText().toString();
         String mail = editViewMail.getText().toString();
         String password = editViewPassword.getText().toString();
@@ -125,7 +124,7 @@ public class NewCommentDialogFragment extends SherlockDialogFragment implements 
         taskCreateUser.execute();
     }
 
-    private void loginUser(){
+    private void loginUser() {
         String name = editViewPseudo.getText().toString();
         String password = editViewPassword.getText().toString();
 
@@ -134,9 +133,9 @@ public class NewCommentDialogFragment extends SherlockDialogFragment implements 
     }
 
 
-    private void createComment(){
+    private void createComment() {
 
-        taskCreateComment = new CreateCommentTask(this, editViewContent.getText().toString(), "201334725211305");
+        taskCreateComment = new CreateCommentTask(this, editViewContent.getText().toString(), idea.getId());
         taskCreateComment.execute();
     }
 
@@ -146,6 +145,8 @@ public class NewCommentDialogFragment extends SherlockDialogFragment implements 
         Log.d("siu", " Lancement du post de commentaire'");
         Toast.makeText(getSherlockActivity(), "Conexion/création de compte", Toast.LENGTH_LONG).show();
 
+        DataAccessLayer.getInstance().setUser(user);
+
         Log.d("siu--------------siu-----------", "token : " + user.getToken());
         if (null == user) {
             Toast.makeText(getSherlockActivity(), "Invalid connexion", Toast.LENGTH_SHORT).show();
@@ -153,8 +154,9 @@ public class NewCommentDialogFragment extends SherlockDialogFragment implements 
         }
         createComment();
     }
+
     @Override
-    public void onIdeaTaskFinished(){
+    public void onIdeaTaskFinished() {
         Toast.makeText(getSherlockActivity(), R.string.toast_comment_created, Toast.LENGTH_LONG).show();
     }
 
@@ -169,14 +171,5 @@ public class NewCommentDialogFragment extends SherlockDialogFragment implements 
         if (null != taskLoginUser)
             taskLoginUser.setCallbackFormulaire(null);
     }
-
-    private void creatNewComment() {
-
-        taskCreateComment = new CreateCommentTask(this, "description lambdaba", id );
-        taskCreateComment.execute();
-
-
-    }
-
 
 }

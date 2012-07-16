@@ -1,5 +1,6 @@
 package com.siu.android.twok.parser;
 
+import android.util.Log;
 import com.google.gson.*;
 import com.siu.android.twok.model.Comment;
 import com.siu.android.twok.model.Idea;
@@ -17,6 +18,7 @@ public class CommentDeserializer implements JsonDeserializer<Comment> {
 
     private static final String CONTENT = "content";
     private static final String USERNAME = "username";
+    private static final String DATE = "created_at";
 
     @Override
     public Comment deserialize(JsonElement json, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
@@ -25,6 +27,7 @@ public class CommentDeserializer implements JsonDeserializer<Comment> {
         Comment comment = new Comment();
         comment.setContent(CommonDeserializer.getString(jsonObject.get(CONTENT)));
         comment.setAuteur(CommonDeserializer.getString(jsonObject.get(USERNAME)));
+        comment.setDate(CommonDeserializer.getString(jsonObject.get(DATE)));
 
         return comment;
     }
