@@ -12,87 +12,81 @@ import com.actionbarsherlock.app.SherlockDialogFragment;
 import com.siu.android.andutils.Application;
 import com.siu.android.twok.DataAccessLayer;
 import com.siu.android.twok.R;
+import com.siu.android.twok.model.Comment;
 import com.siu.android.twok.model.User;
-import com.siu.android.twok.task.CreateIdeaTask;
+import com.siu.android.twok.task.CreateCommentTask;
 import com.siu.android.twok.task.CreateUserTask;
-import com.siu.android.twok.task.mother.LoginTaskCallback;
 import com.siu.android.twok.task.LoginUserTask;
+import com.siu.android.twok.task.mother.LoginTaskCallback;
 import com.siu.android.twok.task.mother.NewIdeaTaskCallback;
+
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
  * User: dieux
- * Date: 06/07/12
- * Time: 17:37
+ * Date: 15/07/12
+ * Time: 21:51
  * To change this template use File | Settings | File Templates.
  */
-public class NewIdeaDialogFragment extends SherlockDialogFragment implements LoginTaskCallback, NewIdeaTaskCallback {
+public class NewCommentDialogFragment extends SherlockDialogFragment implements LoginTaskCallback, NewIdeaTaskCallback {
 
-    private TextView editViewDescription;
-    private TextView editViewTitle;
-    private TextView editViewCategory;
+
+    private TextView editViewContent;
     private TextView editViewPseudo;
     private TextView editViewPassword;
     private TextView editViewMail;
-    private TextView editViewLieu;
 
     private Button buttonNoAccount;
     private Button buttonCancel;
     private Button buttonValidate;
 
-    private CreateIdeaTask taskCreateIdea;
+    private String id;
+
+    private CreateCommentTask taskCreateComment;
     private CreateUserTask taskCreateUser;
     private LoginUserTask taskLoginUser;
 
-
-
+    public NewCommentDialogFragment(String id) {
+        this.id = id;
+    }
 
     @Override
-    public void onCreate(Bundle bundle) {
-        super.onCreate(bundle);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);    //To change body of overridden methods use File | Settings | File Templates.
         setRetainInstance(true);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.new_idea_dialog, container, false);
+        View view = inflater.inflate(R.layout.new_comment_dialog, container, false);
 
-        editViewTitle = (TextView) view.findViewById(R.id.editTitle);
-        editViewDescription = (TextView) view.findViewById(R.id.editDescription);
-        editViewLieu = (TextView) view.findViewById(R.id.editLieu);
-        editViewCategory = (TextView) view.findViewById(R.id.editCategory);
+        editViewContent = (TextView) view.findViewById(R.id.editContent);
+
         editViewPassword = (TextView) view.findViewById(R.id.editPassword);
         editViewPseudo = (TextView) view.findViewById(R.id.editPseudo);
         editViewMail = (TextView) view.findViewById(R.id.editMail);
-
-        buttonNoAccount = (Button) view.findViewById(R.id.buttonNoAccount);
-        buttonCancel = (Button) view.findViewById(R.id.buttonCancel);
-        buttonValidate = (Button) view.findViewById(R.id.buttonAdd);
 
         return view;
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+        super.onActivityCreated(savedInstanceState);    //To change body of overridden methods use File | Settings | File Templates.
 
         getDialog().setTitle(Application.getContext().getString(R.string.formulaire_comment_title));
 
         buttonValidate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                checkFieldAccount(String.valueOf(editViewTitle.getText()), String.valueOf(editViewCategory.getText()),
-                         1, String.valueOf(editViewDescription.getText()),
-                        String.valueOf(editViewPseudo.getText()), String.valueOf(editViewMail.getText()));
-            }
+
+             }
         });
 
         buttonNoAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                checkFieldAccount(String.valueOf(editViewTitle.getText()), String.valueOf(editViewCategory.getText()),
-                         2, String.valueOf(editViewDescription.getText()),
-                        String.valueOf(editViewPseudo.getText()), String.valueOf(editViewMail.getText()));
+                checkFieldFillup();
             }
         });
 
@@ -104,23 +98,23 @@ public class NewIdeaDialogFragment extends SherlockDialogFragment implements Log
         });
     }
 
-    private void checkFieldAccount (String titre, String category, Integer lieu,
-                                    String description, String pseudo, String mail){
+    private void checkFieldFillup() {
         if(null != DataAccessLayer.getInstance().getUser()){
-            Log.d("siu", "TRY TO: Post Idée direct");
-            createIdea();
+            Log.d(getClass().getName(), "TRY TO: Post Idée direct");
+            createComment();
         }
         else if(editViewMail.getText().toString().length() > 0){
-            Log.d("siu", "TRY TO :CREAT USER");
+            Log.d(getClass().getName(), "TRY TO :CREAT USER");
             createUser();
         }
         else if(editViewPseudo.length() > 0 && editViewPassword.length() > 0){
-            Log.d("siu", "TRY to loggin");
+            Log.d(getClass().getName(), "TRY to loggin");
             loginUser();
         }else{
             Toast.makeText(getSherlockActivity(), "Remplissez tous les champs", 2000).show();
         }
     }
+
 
     private void createUser(){
         String name = editViewPseudo.getText().toString();
@@ -139,39 +133,50 @@ public class NewIdeaDialogFragment extends SherlockDialogFragment implements Log
         taskLoginUser.execute();
     }
 
-    private void createIdea(){
 
-        taskCreateIdea = new CreateIdeaTask(this, editViewTitle.getText().toString(), editViewDescription.getText().toString());
-        taskCreateIdea.execute();
+    private void createComment(){
+
+        taskCreateComment = new CreateCommentTask(this, editViewContent.getText().toString(), "201334725211305");
+        taskCreateComment.execute();
     }
 
     @Override
     public void onLoginTaskFinished(User user) {
-        Log.d("siu", " Lancement de la création d' 'idée'");
+
+        Log.d("siu", " Lancement du post de commentaire'");
         Toast.makeText(getSherlockActivity(), "Conexion/création de compte", Toast.LENGTH_LONG).show();
 
-        Log.d("siu--------------siu-----------", "token : "+ user.getToken());
-        if(null == user) {
+        Log.d("siu--------------siu-----------", "token : " + user.getToken());
+        if (null == user) {
             Toast.makeText(getSherlockActivity(), "Invalid connexion", Toast.LENGTH_SHORT).show();
             return;
         }
-
-        createIdea();
+        createComment();
     }
     @Override
     public void onIdeaTaskFinished(){
-        Toast.makeText(getSherlockActivity(), R.string.toast_idea_created, Toast.LENGTH_LONG).show();
+        Toast.makeText(getSherlockActivity(), R.string.toast_comment_created, Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onDetach() {
         super.onDetach();    //To change body of overridden methods use File | Settings | File Templates.
 
-        if (null != taskCreateIdea)
-            taskCreateIdea.setFragment(null);
+        if (null != taskCreateComment)
+            taskCreateComment.setFragment(null);
         if (null != taskCreateUser)
             taskCreateUser.setCallback(null);
         if (null != taskLoginUser)
             taskLoginUser.setCallbackFormulaire(null);
     }
+
+    private void creatNewComment() {
+
+        taskCreateComment = new CreateCommentTask(this, "description lambdaba", id );
+        taskCreateComment.execute();
+
+
+    }
+
+
 }

@@ -4,4 +4,8 @@
 
     <string name="toast_connection_sucsessfull">connexion réussite</string>
     <string name="toast_idea_created">idée ajouté !</string>
+    <string name="toast_comment_created">Commentaire ajouté !</string>
+
+    <string name="formulaire_comment_title">Nouveau commentaire</string>
+    <string name="formulaire_idea_title">Nouvelle idée</string>
 </resources>

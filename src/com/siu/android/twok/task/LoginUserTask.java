@@ -6,7 +6,7 @@ import com.siu.android.andutils.Application;
 import com.siu.android.andutils.util.HttpUtils;
 import com.siu.android.twok.DataAccessLayer;
 import com.siu.android.twok.R;
-import com.siu.android.twok.activity.DetailIdeaActivity;
+import com.siu.android.twok.fragment.formulaire.NewCommentDialogFragment;
 import com.siu.android.twok.model.User;
 import com.siu.android.twok.parser.GsonFormatter;
 import com.siu.android.twok.task.mother.LoginTaskCallback;
@@ -21,7 +21,7 @@ import com.siu.android.twok.util.NetworkUtils;
  */
 public class LoginUserTask extends AsyncTask<Void, Void, User> {
     private LoginTaskCallback callbackFormulaire;
-    private DetailIdeaActivity callbackDetail;
+    private NewCommentDialogFragment callbackDetail;
 
     private String login;
     private String password;
@@ -33,7 +33,7 @@ public class LoginUserTask extends AsyncTask<Void, Void, User> {
         this.password = password;
     }
 
-    public LoginUserTask(DetailIdeaActivity callbackDetail, String login, String password) {
+    public LoginUserTask(NewCommentDialogFragment callbackDetail, String login, String password) {
         this.callbackDetail = callbackDetail;
         this.login = login;
         this.password = password;

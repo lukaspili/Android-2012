@@ -24,14 +24,16 @@ public class GetCommentTask extends AsyncTask<Void, String, List<Comment>> {
 
     private DetailIdeaActivity fragment;
     private String url;
+    private String id;
 
     public GetCommentTask(DetailIdeaActivity fragment) {
         this.fragment = fragment;
     }
 
-    public GetCommentTask(String url, DetailIdeaActivity fragment) {
+    public GetCommentTask(String url, String id, DetailIdeaActivity fragment) {
         this.url = url;
         this.fragment = fragment;
+        this.id= id;
     }
 
     public void setFragment(DetailIdeaActivity articlesFragment) {
@@ -45,21 +47,21 @@ public class GetCommentTask extends AsyncTask<Void, String, List<Comment>> {
             return null;
         }
 
-        String data = UrlUtils.downloadData(url);
+        String data = UrlUtils.downloadData("http://twothousandtwelve.heroku.com/api/ideas/"+id);
 
         if (StringUtils.isEmpty(data)) {
             return null;
         }
         Log.d(getClass().getName(), "response pour le comment: "+ data);
 
-        return GsonFormatter.getGson().fromJson(data, new TypeToken<List<Idea>>() {
+        return GsonFormatter.getGson().fromJson(data, new TypeToken<List<Comment>>() {
         }.getType());
     }
 
     @Override
     protected void onPostExecute(List<Comment> comment) {
         if (null != fragment) {
-           // fragment.onFinishGetCommentTask(comment);
+            fragment.onFinishGetCommentsTask(comment);
         }
     }  
     

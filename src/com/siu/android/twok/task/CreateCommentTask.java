@@ -6,7 +6,7 @@ import com.siu.android.andutils.Application;
 import com.siu.android.andutils.util.HttpUtils;
 import com.siu.android.twok.DataAccessLayer;
 import com.siu.android.twok.R;
-import com.siu.android.twok.activity.DetailIdeaActivity;
+import com.siu.android.twok.fragment.formulaire.NewCommentDialogFragment;
 import com.siu.android.twok.model.Idea;
 import com.siu.android.twok.model.User;
 import com.siu.android.twok.parser.GsonFormatter;
@@ -23,19 +23,18 @@ import com.siu.android.twok.util.NetworkUtils;
 public class CreateCommentTask extends AsyncTask<Void, String, Idea> {
 
 
-        private DetailIdeaActivity fragment;
+        private NewCommentDialogFragment fragment;
         private String titre;
         private String description;
         private String idNumber;
 
-        public CreateCommentTask(DetailIdeaActivity fragment, String titre, String description, String idNumber) {
+        public CreateCommentTask(NewCommentDialogFragment fragment,  String description, String idNumber) {
         this.fragment = fragment;
-        this.titre = titre;
         this.idNumber= idNumber;
         this.description = description;
     }
 
-    public void setFragment(DetailIdeaActivity fragment) {
+    public void setFragment(NewCommentDialogFragment fragment) {
         this.fragment = fragment;
     }
 
@@ -54,7 +53,7 @@ public class CreateCommentTask extends AsyncTask<Void, String, Idea> {
         String response = HttpUtils.getResponseAsString(HttpUtils.request(url, HttpUtils.HttpMethod.POST, "access_token", user.getToken(),
                 "idea[category_ids][]", "873570203659140", "comment[name]", titre, "comment[content]", description));
 
-        Log.e("-siu---------------------------", "reponse :"+ response);
+        Log.e(getClass().getName(), "Liste de commentaire 'la reponse': "+ response);
 
         try {
 

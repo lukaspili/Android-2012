@@ -41,7 +41,7 @@ public class CommentAdapter extends ArrayAdapter<Comment>
             row2.setTag(viewHolder);
         }
 
-        viewHolder.content.setText( comment.getContent());
+        viewHolder.content.setText( "Ce que je pense de ton idée: "+comment.getContent());
         viewHolder.info.setText("Par " + comment.getAuteur() + " le: "+comment.getDate());
 
         return row2;

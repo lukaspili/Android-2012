@@ -10,9 +10,12 @@ import android.widget.*;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.MenuItem;
+import com.siu.android.andutils.util.FragmentUtils;
 import com.siu.android.twok.R;
 import com.siu.android.twok.adaptater.CommentAdapter;
 import com.siu.android.twok.adaptater.IdeaAdapter;
+import com.siu.android.twok.fragment.formulaire.NewCommentDialogFragment;
+import com.siu.android.twok.fragment.formulaire.NewIdeaDialogFragment;
 import com.siu.android.twok.model.Comment;
 import com.siu.android.twok.model.Idea;
 import com.siu.android.twok.model.User;
@@ -41,7 +44,7 @@ import java.util.List;
  * Time: 14:27
  * To change this template use File | Settings | File Templates.
  */
-public class DetailIdeaActivity extends SherlockFragmentActivity implements LoginTaskCallback, NewIdeaTaskCallback {
+public class DetailIdeaActivity extends SherlockFragmentActivity {
 
     private final String EXTRA_SELECTED_TAB_ID = "select_tab_id";
 
@@ -92,10 +95,8 @@ public class DetailIdeaActivity extends SherlockFragmentActivity implements Logi
         Idea idea = (Idea) getIntent().getExtras().getSerializable("idea");
         updateIdea(idea);
 
-        //String[] listeStrings = {"Tata", " J ai dit a ma copine que je l aimais", " J ai accordée de l attention a un roux",
-          //      " J'ai souris à une moche XD", "j achete un hotel rue de la paix", " Et moi a un noiche ROUX !!!",
-            //    " wazaaaaa", "WAZAAAAAHH", "hellooo WAZAHHH", "WAZAHH HELLO WAZAAA HELLO WAZAAA", "WAZAAAAH HALLLLOOOOO"};
-       // listView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listeStrings));
+        final String idNumber = idea.getId();// c'est la seul solution que j'ai trouvé!
+        // listView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listeStrings));
 
         buttonWant.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,7 +119,9 @@ public class DetailIdeaActivity extends SherlockFragmentActivity implements Logi
         buttonNewComment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                postMethod("already");
+                FragmentUtils.showDialog(getSupportFragmentManager(), new NewCommentDialogFragment(idNumber));// LANCER LE DIALOGUE
+
+                //formulaire
             }
         });
 
@@ -128,7 +131,7 @@ public class DetailIdeaActivity extends SherlockFragmentActivity implements Logi
         arrayAdapter = new CommentAdapter(this, listeStrings);
         listView.setAdapter(arrayAdapter);
         //arrayAdapter = new ArrayAdapter<Idea>(getSherlockActivity(), android.R.layout.simple_list_item_1, listeStrings);
-        commentTask = new GetCommentTask(this.getString(R.string.url_base) + this.getString(R.string.url_ideas), this) ;
+        commentTask = new GetCommentTask(this.getString(R.string.url_base) + this.getString(R.string.url_idea_comments),idea.getId(), this) ;
         commentTask.setFragment(this);
         commentTask.execute();
     }
@@ -162,6 +165,17 @@ public class DetailIdeaActivity extends SherlockFragmentActivity implements Logi
         task.execute();
     }
 
+    public void onFinishGetCommentsTask(List<Comment> comments) {
+        Log.d(getClass().getName(), comments.get(0).getContent());
+        Log.d(getClass().getName(), comments.get(1).getContent());
+        if (null != comments) {
+            listeStrings.clear();
+            listeStrings.addAll(comments);
+            arrayAdapter.notifyDataSetChanged();
+        } else {
+            Toast.makeText(this, "Impossible de récupérer les commentaires", 2000).show();
+        }
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -171,11 +185,6 @@ public class DetailIdeaActivity extends SherlockFragmentActivity implements Logi
                 return true;
         }
         return false;
-    }
-
-    @Override
-    public void onIdeaTaskFinished() {
-        //To change body of implemented methods use File | Settings | File Templates.
     }
 
 
@@ -244,26 +253,4 @@ public class DetailIdeaActivity extends SherlockFragmentActivity implements Logi
     }
 
 
-    @Override
-    public void onLoginTaskFinished(User user) {
-
-        Log.d("siu", " Lancement du post de commentaire'");
-        Toast.makeText(this, "Conexion/création de compte", Toast.LENGTH_LONG).show();
-
-        Log.d("siu--------------siu-----------", "token : " + user.getToken());
-        if (null == user) {
-            Toast.makeText(this, "Invalid connexion", Toast.LENGTH_SHORT).show();
-            return;
-        }
-    }
-
-    private void creatNewComment() {
-
-        taskCreateComment = new CreateCommentTask(this,"titre provisoire", "description lambdaba", idea.getId() );
-        taskCreateComment.execute();
-
-
-    }
-
-
-}
+ }

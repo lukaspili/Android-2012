@@ -17,6 +17,7 @@ public class GsonFormatter {
     private static Gson gson = new GsonBuilder()
             .registerTypeAdapter(Idea.class, new IdeaDeserializer())
             .registerTypeAdapter(User.class, new UserDeserializer())
+            .registerTypeAdapter(User.class, new CommentDeserializer())
             .create();
 
     public static Gson getGson() {

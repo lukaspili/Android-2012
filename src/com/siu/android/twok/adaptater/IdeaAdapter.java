@@ -28,7 +28,7 @@ public class IdeaAdapter extends ArrayAdapter<Idea>
     public View getView(int position, View row, ViewGroup parent) {
         if (row == null) {
             LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            row = inflater.inflate(R.layout.row_idea, null);
+            row = inflater.inflate(R.layout.row_idea, null, false);
         }
 
         Idea idea = getItem(position);

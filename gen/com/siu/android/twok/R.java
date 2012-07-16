@@ -786,7 +786,7 @@ containing a value of this type.
         public static final int ic_launcher=0x7f020055;
     }
     public static final class id {
-        public static final int about=0x7f040058;
+        public static final int about=0x7f04005a;
         public static final int abs__action_bar=0x7f040022;
         public static final int abs__action_bar_container=0x7f040021;
         public static final int abs__action_bar_subtitle=0x7f040011;
@@ -817,7 +817,7 @@ containing a value of this type.
         public static final int abs__titleDivider=0x7f04001c;
         public static final int abs__up=0x7f04000b;
         public static final int ad_banner_view=0x7f040027;
-        public static final int add=0x7f040056;
+        public static final int add=0x7f040058;
         public static final int buttonAdd=0x7f04003a;
         public static final int buttonCancel=0x7f040039;
         public static final int buttonNoAccount=0x7f04003b;
@@ -826,20 +826,21 @@ containing a value of this type.
         public static final int button_new_comment=0x7f04002c;
         public static final int button_want_to=0x7f040029;
         public static final int category=0x7f04002f;
-        public static final int categoryOption=0x7f040054;
+        public static final int categoryOption=0x7f040056;
         public static final int comment=0x7f040034;
         public static final int comment_category=0x7f040033;
         public static final int date=0x7f040030;
         public static final int description=0x7f040032;
         public static final int description_category=0x7f040031;
         public static final int disableHome=0x7f040009;
-        public static final int editCategory=0x7f040044;
-        public static final int editDescription=0x7f040048;
-        public static final int editLieu=0x7f040046;
+        public static final int editCategory=0x7f040047;
+        public static final int editContent=0x7f040044;
+        public static final int editDescription=0x7f04004b;
+        public static final int editLieu=0x7f040049;
         public static final int editMail=0x7f04003d;
         public static final int editPassword=0x7f04003f;
         public static final int editPseudo=0x7f040041;
-        public static final int editTitle=0x7f04004a;
+        public static final int editTitle=0x7f04004d;
         public static final int homeAsUp=0x7f040006;
         public static final int image=0x7f04002d;
         public static final int layoutButton=0x7f040038;
@@ -848,31 +849,32 @@ containing a value of this type.
         public static final int listView1=0x7f040035;
         public static final int listView2=0x7f040036;
         public static final int name=0x7f04002e;
-        public static final int newIdea=0x7f040053;
+        public static final int newIdea=0x7f040055;
         public static final int normal=0x7f040001;
-        public static final int parametre=0x7f040055;
-        public static final int reset=0x7f040057;
-        public static final int row_comment_content=0x7f04004d;
-        public static final int row_comment_info=0x7f04004c;
-        public static final int row_idea_had_done=0x7f040052;
-        public static final int row_idea_name=0x7f04004f;
-        public static final int row_idea_not_care=0x7f040051;
-        public static final int row_idea_wanna_do=0x7f040050;
-        public static final int row_image=0x7f04004e;
+        public static final int parametre=0x7f040057;
+        public static final int reset=0x7f040059;
+        public static final int row_comment_content=0x7f04004f;
+        public static final int row_comment_info=0x7f04004e;
+        public static final int row_idea_had_done=0x7f040054;
+        public static final int row_idea_name=0x7f040051;
+        public static final int row_idea_not_care=0x7f040053;
+        public static final int row_idea_wanna_do=0x7f040052;
+        public static final int row_image=0x7f040050;
         public static final int showCustom=0x7f040008;
         public static final int showHome=0x7f040005;
         public static final int showTitle=0x7f040007;
         public static final int tabMode=0x7f040003;
         public static final int text=0x7f040037;
         public static final int textAccountRow=0x7f040042;
-        public static final int textCategory=0x7f040043;
-        public static final int textDescription=0x7f040047;
-        public static final int textLieu=0x7f040045;
+        public static final int textCategory=0x7f040046;
+        public static final int textContent=0x7f040043;
+        public static final int textDescription=0x7f04004a;
+        public static final int textLieu=0x7f040048;
         public static final int textMail=0x7f04003c;
         public static final int textPassword=0x7f04003e;
         public static final int textPseudo=0x7f040040;
-        public static final int textTitle=0x7f040049;
-        public static final int textYourIdea=0x7f04004b;
+        public static final int textTitle=0x7f04004c;
+        public static final int textYourIdea=0x7f040045;
         public static final int useLogo=0x7f040004;
         public static final int wrap_content=0x7f040000;
     }
@@ -908,11 +910,12 @@ containing a value of this type.
         public static final int fragment3=0x7f030019;
         public static final int fragment4=0x7f03001a;
         public static final int main=0x7f03001b;
-        public static final int new_idea_dialog=0x7f03001c;
-        public static final int row_comment=0x7f03001d;
-        public static final int row_idea=0x7f03001e;
-        public static final int sherlock_spinner_dropdown_item=0x7f03001f;
-        public static final int sherlock_spinner_item=0x7f030020;
+        public static final int new_comment_dialog=0x7f03001c;
+        public static final int new_idea_dialog=0x7f03001d;
+        public static final int row_comment=0x7f03001e;
+        public static final int row_idea=0x7f03001f;
+        public static final int sherlock_spinner_dropdown_item=0x7f030020;
+        public static final int sherlock_spinner_item=0x7f030021;
     }
     public static final class menu {
         public static final int main_menu=0x7f0b0000;
@@ -950,15 +953,18 @@ containing a value of this type.
          */
         public static final int abs__shareactionprovider_share_with_application=0x7f090009;
         public static final int app_name=0x7f09000a;
+        public static final int formulaire_comment_title=0x7f09000e;
+        public static final int formulaire_idea_title=0x7f09000f;
+        public static final int toast_comment_created=0x7f09000d;
         public static final int toast_connection_sucsessfull=0x7f09000b;
         public static final int toast_idea_created=0x7f09000c;
-        public static final int url_base=0x7f09000d;
-        public static final int url_idea_comments=0x7f090010;
-        public static final int url_idea_opinion=0x7f090011;
-        public static final int url_ideas=0x7f09000e;
-        public static final int url_ideas_create=0x7f09000f;
-        public static final int url_users_create=0x7f090013;
-        public static final int url_users_login=0x7f090012;
+        public static final int url_base=0x7f090010;
+        public static final int url_idea_comments=0x7f090013;
+        public static final int url_idea_opinion=0x7f090014;
+        public static final int url_ideas=0x7f090011;
+        public static final int url_ideas_create=0x7f090012;
+        public static final int url_users_create=0x7f090016;
+        public static final int url_users_login=0x7f090015;
     }
     public static final class style {
         public static final int DialogWindowTitle_Sherlock=0x7f0a0033;
